@@ -1,1 +1,24 @@
 <p>order-list works!</p>
+
+<mat-tab-group>
+  <mat-tab label="Orders">
+    <!-- * NOTE: matTabContent allows lazy loading to occur -->
+    <ng-template matTabContent>
+      <h1>LAZY LOADED</h1>
+      <p>Orders here</p>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Shipments">
+    <!-- * NOTE: eager loading behavior by default-->
+      <h1>EAGER LOADED</h1>
+      <p>Shipments</p>
+  </mat-tab>
+
+  <mat-tab label="Archived">
+    <ng-template matTabContent>
+      <p>Archived orders here</p>
+    </ng-template>
+  </mat-tab>
+
+</mat-tab-group>
